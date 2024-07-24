@@ -3,11 +3,11 @@
     <div class="bg"></div>
     <h1>Simple parallax sections</h1>
   </section>
-   <section>
+  <section>
     <div class="bg"></div>
     <h1>Hey look, a title</h1>
   </section>
- <section>
+  <section>
     <div class="bg"></div>
     <h1>They just keep coming</h1>
   </section>
@@ -22,9 +22,7 @@
 </template>
 <script setup lang="ts">
 // import HelloWorld from "./components/HelloWorld.vue";
-import { ref, onMounted, onUnmounted } from 'vue';
-import BrowserIndex from './page-browser/BrowserIndex.vue';
-import MobileIndex from './page-mobile/MobileIndex.vue';
+import { onMounted, onUnmounted } from 'vue';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
@@ -32,12 +30,12 @@ gsap.registerPlugin(ScrollTrigger);
 const triggers = ScrollTrigger.getAll();
 onMounted(() => {
   //获取比率
-  let getRatio = (el:HTMLElement) => { 
-    return window.innerHeight / (window.innerHeight + el.offsetHeight)
+  let getRatio = (el: HTMLElement) => {
+    return window.innerHeight / (window.innerHeight + el.offsetHeight);
   };
 
-  gsap.utils.toArray('section').forEach((section:any, i:number) => {
-    section.bg = section.querySelector('.bg'); 
+  gsap.utils.toArray('section').forEach((section: any, i: number) => {
+    section.bg = section.querySelector('.bg');
     // Give the backgrounds some random images
     section.bg.style.backgroundImage = `url(https://picsum.photos/1600/800?random=${i})`;
 
@@ -45,27 +43,27 @@ onMounted(() => {
     // use function-based values in order to keep things responsive
     gsap.fromTo(
       section.bg,
-      { 
-        backgroundPosition:()=>{  
+      {
+        backgroundPosition: () => {
           // console.log("开始 y : "+(-window.innerHeight * getRatio(section)));
-          return i ? `50% ${-window.innerHeight * getRatio(section)}px` : '50% 0px' 
+          return i ? `50% ${-window.innerHeight * getRatio(section)}px` : '50% 0px';
           // return `50% ${-429}px`
           // return `50% ${0}px`
         }
       },
-      { 
-        backgroundPosition:()=>{
-          console.log("结束y : "+window.innerHeight * (1 - getRatio(section)));
-          
-          return `50% ${window.innerHeight * (1 - getRatio(section))}px`
+      {
+        backgroundPosition: () => {
+          console.log('结束y : ' + window.innerHeight * (1 - getRatio(section)));
+
+          return `50% ${window.innerHeight * (1 - getRatio(section))}px`;
         },
         ease: 'none',
         scrollTrigger: {
           trigger: section,
-          start: () => (i ? 'top bottom' : 'top top'),//上一元素的底部与当前元素的顶部
-          end: 'bottom top',//当前元素的底部与下一元素的顶部 
+          start: () => (i ? 'top bottom' : 'top top'), //上一元素的底部与当前元素的顶部
+          end: 'bottom top', //当前元素的底部与下一元素的顶部
           scrub: true,
-          markers:true,
+          markers: true,
           invalidateOnRefresh: true // to make it responsive
         }
       }

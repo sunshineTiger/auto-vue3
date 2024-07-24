@@ -22,9 +22,7 @@
 </template>
 <script setup lang="ts">
 // import HelloWorld from "./components/HelloWorld.vue";
-import { ref, onMounted, onUnmounted } from 'vue';
-import BrowserIndex from './page-browser/BrowserIndex.vue';
-import MobileIndex from './page-mobile/MobileIndex.vue';
+import { onMounted, onUnmounted } from 'vue'; 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 

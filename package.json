@@ -12,6 +12,7 @@
     "@types/crypto-js": "^4.2.2",
     "crypto-js": "^4.2.0",
     "gsap": "^3.12.5",
+    "terser": "^5.31.3",
     "vue": "^3.4.21"
   },
   "devDependencies": {
