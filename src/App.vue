@@ -4,8 +4,8 @@
     <button class="btn-color-normal w-20 h-10">
       <span>Button</span>
     </button> -->
-    <div class="bg-blue-500">这是我修改后的githubt提交</div>
-    <div class="bg-blue-500">提交次数 ：6</div>
+    <div class="bg-blue-500">这是我修改后的git提交</div>
+    <div class="bg-blue-500">提交次数 ：7</div>
   </div>
 </template>
 <script setup lang="ts">
