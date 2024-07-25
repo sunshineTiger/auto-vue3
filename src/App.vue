@@ -5,7 +5,7 @@
       <span>Button</span>
     </button> -->
     <div class="bg-blue-500">这是我修改后的githubt提交</div>
-    <div class="bg-blue-500">提交次数 ：3</div>
+    <div class="bg-blue-500">提交次数 ：4</div>
   </div>
 </template>
 <script setup lang="ts">
