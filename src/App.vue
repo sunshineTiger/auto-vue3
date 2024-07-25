@@ -1,9 +1,11 @@
 <template>
   <div style="height: 100vh; width: 100vw" class="bg-red-500">
-    <div style="height: 50vh; width: 100vw" class="bg-red-500">xxxxxxxxxxxx</div>
+    <!-- <div style="height: 50vh; width: 100vw" class="bg-red-500">xxxxxxxxxxxx</div>
     <button class="btn-color-normal w-20 h-10">
       <span>Button</span>
-    </button>
+    </button> -->
+    <div class="bg-blue-500">这是我修改后的githubt提交</div>
+    <div class="bg-blue-500">提交次数 ： 1</div>
   </div>
 </template>
 <script setup lang="ts">
